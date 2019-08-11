@@ -1,4 +1,6 @@
 import time
+
+import allure
 from selenium.webdriver.common.by import By
 
 from base.base_action import BaseAction
@@ -13,14 +15,17 @@ class MePage(BaseAction):
     be_vip_button = By.XPATH, "//*[@text='加入超级VIP']"
 
     #获取昵称
+    @allure.step(title="获取昵称")
     def get_nick_name(self):
         return self.get_text(self.nick_name)
 
     #点击设置按钮
+    @allure.step(title="点击设置按钮")
     def click_setting_button(self):
         self.click(self.setting_buton)
 
     #点击加入超级VIP
+    @allure.step(title="点击加入超级VIP")
     def click_be_vip(self):
         self.find_element_scroll(self.be_vip_button).click()
         time.sleep(10)

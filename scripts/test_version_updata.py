@@ -4,7 +4,7 @@ from base.base_driver import init_driver
 from page.page import Page
 
 
-class TestLogin:
+class TestVersionUpdata:
 
     def setup(self):
         self.driver = init_driver()

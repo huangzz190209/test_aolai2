@@ -8,7 +8,7 @@ from page.page import Page
 
 
 
-class TestLogin:
+class TestVip:
 
     def setup(self):
         self.driver = init_driver()

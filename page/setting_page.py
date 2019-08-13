@@ -9,6 +9,8 @@ class SettingPage(BaseAction):
     about_aolai_button = By.XPATH,"//*[@text='关于百年奥莱']"
     # 清理缓存按钮
     clear_cache_button= By.XPATH,"//*[@text = '清理缓存']"
+    # 地址管理
+    address_list_button = By.XPATH,"//*[@text='地址管理']"
 
     #点击关于百年奥莱
     @allure.step(title="点击关于百年奥莱")
@@ -20,4 +22,9 @@ class SettingPage(BaseAction):
     @allure.step(title="点击清理缓存")
     def click_clear_cache(self):
         self.find_element_scroll(self.clear_cache_button).click()
+
+    #点击地址管理
+    @allure.step(title="点击地址管理")
+    def click_address_list(self):
+        self.find_element_scroll(self.address_list_button).click()
 

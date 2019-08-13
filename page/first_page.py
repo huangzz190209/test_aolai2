@@ -20,8 +20,8 @@ class FirstPage(BaseAction):
             return
         #点击已有账号登录
         page.to_login.click_to_login()
-        page.login.input_username("itheima_test")
-        page.login.input_password("itheima")
+        page.login.input_username("tangqifeng")
+        page.login.input_password("123456")
         page.login.click_login_button()
 
 

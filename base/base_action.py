@@ -121,3 +121,10 @@ class BaseAction:
                 return True
 
             time.sleep(poll)
+
+    def is_feature_exist(self,feature):
+        try:
+            self.find_element(feature)
+            return True
+        except TimeoutException:
+            return False

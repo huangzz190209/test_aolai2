@@ -128,3 +128,9 @@ class BaseAction:
             return True
         except TimeoutException:
             return False
+
+    def press_back(self):
+        self.driver.press_keycode(4)
+
+    def press_enter(self):
+        self.driver.press_keycode(66)

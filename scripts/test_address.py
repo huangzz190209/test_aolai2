@@ -42,7 +42,6 @@ class TestAddress:
         self.page.edit_address.input_post_edit(post_code)
         # 新增地址 勾选 设为默认地址
         self.page.edit_address.click_default_address()
-        time.sleep(3)
         # 新增地址 选择一个随机的区域
         self.page.edit_address.choose_region()
         # 新增地址 点击 保存
@@ -91,7 +90,7 @@ class TestAddress:
         # 重新输入 输入 详细地址
         self.page.edit_address.input_info_edit("三单元 504")
         # 重新输入 输入 邮编
-        self.page.edit_address.input_post_edit("10000")
+        self.page.edit_address.input_post_edit("100000")
         # 重新输入 选择一个随机的区域
         self.page.edit_address.choose_region()
         # 重新输入 点击 保存
@@ -99,6 +98,7 @@ class TestAddress:
         #断言 是否出现保存成功
         assert self.page.edit_address.is_toast_exist("保存成功")
         time.sleep(5)
+
     #测试删除地址
     def test_delete_address(self):
         #如果没有登录就先登录

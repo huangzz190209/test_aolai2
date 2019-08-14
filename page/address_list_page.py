@@ -26,29 +26,36 @@ class AddressListPage(BaseAction):
         self.find_element_scroll(self.add_address_button).click()
 
     #获取 默认的姓名和电话的文字信息
+    @allure.step(title="获取默认的姓名和电话的文字信息")
     def get_default_recipet_name_text(self):
         return self.get_text(self.default_recipet_name_text_view)
 
     # 判断默认标记是否存在
+    @allure.step(title="默认标记是否存在")
     def is_dafault_feature_exist(self):
         return self.is_feature_exist(self.is_default_feature)
 
     #点击默认地址
+    @allure.step(title="点击默认的地址")
     def click_default_address(self):
         self.click(self.is_default_feature)
 
     #判断删除按钮是否存在
+    @allure.step(title="判断删除按钮是否存在")
     def is_delete_address_exist(self):
         return self.is_feature_exist(self.delete_button)
 
     #点击编辑
+    @allure.step(title="点击编辑按钮")
     def click_edit(self):
         self.click(self.edit_button)
 
     #点击删除
+    @allure.step(title="点击删除按钮")
     def click_delete(self):
         self.click(self.delete_button)
 
     #点击确定
+    @allure.step(title="点击确定按钮")
     def click_commit(self):
         self.click(self.commit_button)
